@@ -1,0 +1,148 @@
+<!--DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"-->
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="página de teste para treinamento"/>
+    <meta name="keywords" content="edilson pitangui"/>
+    <meta name="author" content="Professor Edilson"/>
+	<meta name="viewport" content="widht=device-widht, initial-scale=1.0"/>
+	<script type="text/javascript" src="js/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" type="text/CSS" href="CSS/est.css" >
+	<title>Videoaulas</title>
+    
+	
+	
+</head>
+	  <body>
+	<div id="geral">
+	  <!-- **************************************************************CABEÇALHO INÍCIO -->
+	   <div id="cabecalho">
+           <div id="logotipo">
+					<a href="home.html">
+					<img src="images/logotipo.gif" title="Logotipo" alt="logotipo" border="0"/>
+					</a>
+			</div>
+			<div class="banner">
+				<div><h1>Página de Ensaio</h1></div>
+			</div>
+			
+			<input type="checkbox" id="bt_menu">
+			<label for="bt_menu">&#9776;</label>
+			<nav class="menu">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="">Registro</a></li>
+					<li><a href="">Avaliações</a></li>
+					<li>
+						<a>Atividades</a>
+						<ul>
+							<li><a href="ativ_oitavo_ano.html">8º ANO</a></li>
+							<li><a href="ativ_nono_ano.html">9º ANO</a></li>
+							<li><a href="ativ_prim_ano.html">1º ANO</a></li>
+							<li><a href="ativ_seg_ano.html">2º ANO</a></li>
+							<li><a href="ativ_terc_ano.html">3º ANO</a></li>
+						</ul>
+					</li>
+						
+					<li>
+						<a >Slides</a>
+						<ul>
+							<li><a href="sld_oitavo_ano.html">8º ANO</a></li>
+							<li><a href="sld_nono_ano.html">9º ANO</a></li>
+							<li><a href="sld_prim_ano.html">1º ANO</a></li>
+							<li><a href="sld_seg_ano.html">2º ANO</a></li>
+							<li><a href="sld_terc_ano.html">3º ANO</a></li>
+						</ul>
+					</li>
+					<li>
+						<a>Videoaulas</a>
+						<ul>
+							<li><a href="vid_oitavo_ano.html">8º ANO</a></li>
+							<li><a href="vid_nono_ano.html">9º ANO</a></li>
+							<li><a href="vid_prim_ano.html">1º ANO</a></li>
+							<li><a href="vid_seg_ano.html">2º ANO</a></li>
+							<li><a href="vid_terc_ano.html">3º ANO</a></li>
+						</ul>
+					</li>
+										
+					<li class="li-principal"><a href="">Simulados</a></li>
+						<!-- <li class="li-principal"><a href="extra.html">Extra</a></li> -->
+				</ul>
+			</nav>
+			
+		</div>
+       
+	  
+	  <!-- *****************************************************************CABEÇALHO FIM -->
+		<div class="corpo">
+			<div id="videos">
+				<div class="tab">
+					<button id="defaultOpen" class="tablinks" onclick="openCity(event, 'apresentacao')">Sobre as videoaulas</button>
+					<button class="tablinks" onclick="openCity(event, 'conj_conceitos')">Conjuntos: conceitos gerais</button>
+					<button class="tablinks" onclick="openCity(event, 'conj_numericos')">Conjuntos numéricos</button>
+					<button class="tablinks" onclick="openCity(event, 'func_geral')">Funções: conceitos gerais</button>
+				</div>
+				
+				<div id="apresentacao" class="tabcontent">
+				  <h3>Sobre as videoaulas</h3>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/gfQ6KqclmAs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				
+				<div id="conj_conceitos" class="tabcontent">
+				  <h3>Conjuntos: conceitos gerais</h3>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/79oH6jsIJ0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+				<div id="conj_numericos" class="tabcontent">
+				  <h3>Conjuntos numéricos</h3>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/NDetIn-HvDs" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+				<div id="func_geral" class="tabcontent">
+				  <h3>Funções: conceitos gerais</h3>
+				  <p>Este vídeo ainda não está disponível.</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div id="rodape">	
+			<div id="direitos_reservados">
+				Professor Edilson | Matematicando | 2020 - 2020 | Todos os direitos reservados!
+			</div>
+		</div>
+		
+		
+		
+	</div>
+	
+	<script type="text/javascript">
+	function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+		
+	</script>
+	
+	  </body>
+</html>

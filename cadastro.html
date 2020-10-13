@@ -1,0 +1,199 @@
+<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="página de teste para treinamento"/>
+    <meta name="keywords" content="edilson pitangui"/>
+    <meta name="author" content="Professor Edilson"/>
+	<meta name="viewport" content="widht=device-widht, initial-scale=1.0"/>    
+	<link rel="stylesheet" type="text/CSS" href="CSS/est.css" >
+	<!--link rel="stylesheet" type="text/CSS" href="CSS/bootstrap.min.css"-->
+	<script type="text/javascript" src="js/jquery-3.5.0.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="js/localization/messages_pt_BR.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-notify.min.js"></script>
+	
+        <title>Página de Registro de Alunos</title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#fone").mask("(00) 0 0000-0000"),
+			$("#frmCAD").validate({
+				rules:{
+					nome:{
+						required: true,
+						maxlength: 100,
+						minlength: 10,
+						minWords: 2
+					},
+					escola:{required: true},
+					turma:{required: true},
+					email:{required: true, email: true},
+					fone:{required: true},
+					sexo:{required: true},
+					senha:{required: true}
+				},
+				submitHandler: function(form){
+					alert("Registro realizado com sucesso!");
+				},
+				validarFormulario(){
+					return true;
+				}
+			})
+		})
+	</script>
+
+        
+  </head>
+
+  <body>
+    <noscript  id="advertencia">
+        <h1><b>Atenção:</b><h1><br/>
+           <p>Seu navegador não está aceitando scripts. Configure-o para aceitar scripts ou utilize outro navegador.</p>
+    </noscript>
+	
+<div id="geral">	
+	<div id="cabecalho">
+          <div id="logotipo">
+					<a href="home.html">
+					<img src="images/logotipo.gif" title="Logotipo" alt="logotipo" border="0"/>
+					</a>
+			</div>
+			<div class="banner">
+				<div><h1>Página de Ensaio</h1></div>
+			</div>
+			
+			<input type="checkbox" id="bt_menu">
+			<label for="bt_menu">&#9776;</label>
+			<nav class="menu">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="">Registro</a></li>
+					<li><a href="">Avaliações</a></li>
+					<li>
+						<a>Atividades</a>
+						<ul>
+							<li><a href="ativ_oitavo_ano.html">8º ANO</a></li>
+							<li><a href="ativ_nono_ano.html">9º ANO</a></li>
+							<li><a href="ativ_prim_ano.html">1º ANO</a></li>
+							<li><a href="ativ_seg_ano.html">2º ANO</a></li>
+							<li><a href="ativ_terc_ano.html">3º ANO</a></li>
+						</ul>
+					</li>
+						
+					<li>
+						<a >Slides</a>
+						<ul>
+							<li><a href="sld_oitavo_ano.html">8º ANO</a></li>
+							<li><a href="sld_nono_ano.html">9º ANO</a></li>
+							<li><a href="sld_prim_ano.html">1º ANO</a></li>
+							<li><a href="sld_seg_ano.html">2º ANO</a></li>
+							<li><a href="sld_terc_ano.html">3º ANO</a></li>
+						</ul>
+					</li>
+					<li>
+						<a>Videoaulas</a>
+						<ul>
+							<li><a href="vid_oitavo_ano.html">8º ANO</a></li>
+							<li><a href="vid_nono_ano.html">9º ANO</a></li>
+							<li><a href="vid_prim_ano.html">1º ANO</a></li>
+							<li><a href="vid_seg_ano.html">2º ANO</a></li>
+							<li><a href="vid_terc_ano.html">3º ANO</a></li>
+						</ul>
+					</li>
+										
+					<li class="li-principal"><a href="">Simulados</a></li>
+						<!-- <li class="li-principal"><a href="extra.html">Extra</a></li> -->
+				</ul>
+			</nav>
+		
+    </div>
+	
+	<div id="corpo">
+		<br />
+		<div class="formulario"> 
+
+			 <fieldset>
+			 <!-- para deixar o fieldset em tamanho mínimo a esquerda, use o atributo style="display: inline; text-align: left;" dentro da tag fieldset -->
+				  
+				  <legend class="ident">IDENTIFICAÇÃO (Em construção!!!!)</legend>
+				  <!-- div class="container" -->
+					  <form name="frmCAD" id="frmCAD" action="acao.php" method="POST" onSubmit="return validarFormulario()" >
+					   <!--  action="acao.php" onSubmit="return validarFormulario() enctype="application/x-www-form-urlencoded" -->
+							<div class="form-group">
+								<label for="nome">Nome:</label>
+								<input type="text" id="nome" name="nome" value="" class="form-control" tabindex="1"/>
+								<!-- size="40" maxlength="50"  -->
+							</div>
+							<div class="form-group">	
+								<label>Escola:</label>
+								<input type="radio" id="escola" name="escola" value="EE Zico Barbosa" class="form-control" tabindex="2" />EE ZICO BARBOSA &nbsp &nbsp &nbsp
+								<input type="radio" id="escola" name="escola" value="EE Monsenhor Artur de Oliveira" class="form-control" tabindex="3" />EE MONSENHOR ARTUR DE OLIVEIRA
+								
+							</div>
+							<div class="form-group">
+								<label>Turma:</label>
+									<select name="turma" id="turma" class="form-control" tabindex="4" />
+											<option value="">SELECIONE</option>
+										<optgroup label="EEMAO">
+											<option value="1_ano_1">1º Ano A1</option>
+											<option value="1_ano_2">1º Ano A2</option>
+											<option value="2_ano_1">2º Ano A2</option>
+										</optgroup>
+										
+										<optgroup label="EEZB">
+											<option value="8_ano">8º Ano</option>
+											<option value="9_ano">9º Ano</option>
+											<option value="1_ano">1º Ano</option>
+											<option value="3_ano">3º Ano</option>
+										</optgroup>
+									</select>
+							</div>
+								
+								
+							
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input type="text" id="email" name="email" value="" class="form-control" tabindex="5"/>
+								<br/><br/> <!-- size="40" maxlength="60"  -->
+							</div>
+							<div class="form-group">
+								<label for="fone">Telefone Celular:</label>
+								<input type="text" id="fone" name="fone" value=""  class="form-control" tabindex="6"/>
+							</div><!-- size="20" maxlength="15"  -->
+								
+							<div class="form-group">
+								<label>Sexo:</label>
+								<input type="radio" id="sexo" name="sexo" value="M" class="form-control" tabindex="7"/>Masculino &nbsp &nbsp &nbsp 
+								<input type="radio" id="sexo" name="sexo" value="F" class="form-control" tabindex="8"/>Feminino
+								
+							</div>
+							
+							<div class="form-group">
+								<label for="senha"> &nbsp Senha Fornecida na Sala de Aula:</label>
+								<input type="password" id="senha" name="senha" value="" class="form-control"  tabindex="9" &nbsp />
+								<!-- size="20" maxlength="9" -->
+							</div>
+								
+								
+								<input  class="btn btn-primary" type="reset" id="btnLimpar" name="btnLimpar" value="Limpar Dados" tabindex="11"/> &nbsp &nbsp
+								<button class="btn btn-primary" tabindex="10">Salvar e enviar</button>
+								<!--
+								<input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar Dados"  class="form-control" tabindex="11" />
+								-->
+					  </form>
+					 <!-- /div --> 
+			 </fieldset>
+		</div> <!-- div formulario -->
+	</div> <!-- div corpo -->
+		
+		<div id="rodape">	
+			<div id="direitos_reservados">Professor Edilson | Matematicando | 2020 - 2020 | Todos os direitos reservados!</div>
+		</div>
+</div> <!-- div geral-->
+
+</body>
+</html>
